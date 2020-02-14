@@ -7,23 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E154B6923F454F400117C4B /* MapTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E154B6823F454F400117C4B /* MapTabViewController.swift */; };
+		9E154B6E23F458A800117C4B /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E154B6D23F458A800117C4B /* StudentInformation.swift */; };
+		9E154B7023F459FE00117C4B /* StudentLocationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E154B6F23F459FE00117C4B /* StudentLocationResults.swift */; };
+		9E154B7323F45B0100117C4B /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E154B7223F45B0100117C4B /* LocationModel.swift */; };
+		9E154B7523F4605A00117C4B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E154B7423F4605A00117C4B /* UIViewController+Extension.swift */; };
+		9E154B7723F463B100117C4B /* TableTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E154B7623F463B100117C4B /* TableTabViewController.swift */; };
+		9E154B7923F4A5F100117C4B /* InfoPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E154B7823F4A5F100117C4B /* InfoPostingViewController.swift */; };
+		9E23452323F4BF7500951EBC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23452223F4BF7500951EBC /* LocationViewController.swift */; };
+		9EBC7BDC23F59B7B00B0B905 /* StudentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BDB23F59B7B00B0B905 /* StudentProfile.swift */; };
+		9EBC7BDE23F5CE7800B0B905 /* StudentLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BDD23F5CE7800B0B905 /* StudentLocationRequest.swift */; };
+		9EBC7BE023F5CF6F00B0B905 /* CreateStudentLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BDF23F5CF6F00B0B905 /* CreateStudentLocationResponse.swift */; };
+		9EBC7BEA23F604B000B0B905 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BE923F604B000B0B905 /* StudentModel.swift */; };
 		9EFF493B23F41B8E00822168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF493A23F41B8E00822168 /* AppDelegate.swift */; };
 		9EFF493D23F41B8E00822168 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF493C23F41B8E00822168 /* SceneDelegate.swift */; };
-		9EFF493F23F41B8E00822168 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF493E23F41B8E00822168 /* ViewController.swift */; };
 		9EFF494223F41B8E00822168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF494023F41B8E00822168 /* Main.storyboard */; };
 		9EFF494423F41B9200822168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF494323F41B9200822168 /* Assets.xcassets */; };
 		9EFF494723F41B9200822168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF494523F41B9200822168 /* LaunchScreen.storyboard */; };
+		9EFF495323F41CC000822168 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF495223F41CC000822168 /* LoginViewController.swift */; };
+		9EFF495523F41E9C00822168 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF495423F41E9C00822168 /* CustomButton.swift */; };
+		9EFF495723F41ED000822168 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF495623F41ED000822168 /* Colors.swift */; };
+		9EFF495923F41F4200822168 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF495823F41F4200822168 /* Colors.xcassets */; };
+		9EFF495B23F41FB500822168 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF495A23F41FB500822168 /* CustomTextField.swift */; };
+		9EFF496523F423C800822168 /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF496423F423C800822168 /* OTMClient.swift */; };
+		9EFF496A23F428FC00822168 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF496923F428FC00822168 /* LoginRequest.swift */; };
+		9EFF496D23F42A6900822168 /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF496C23F42A6900822168 /* SessionResponse.swift */; };
+		9EFF496F23F42BFC00822168 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF496E23F42BFC00822168 /* ErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E154B6823F454F400117C4B /* MapTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabViewController.swift; sourceTree = "<group>"; };
+		9E154B6D23F458A800117C4B /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		9E154B6F23F459FE00117C4B /* StudentLocationResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationResults.swift; sourceTree = "<group>"; };
+		9E154B7223F45B0100117C4B /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		9E154B7423F4605A00117C4B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9E154B7623F463B100117C4B /* TableTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTabViewController.swift; sourceTree = "<group>"; };
+		9E154B7823F4A5F100117C4B /* InfoPostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPostingViewController.swift; sourceTree = "<group>"; };
+		9E23452223F4BF7500951EBC /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		9EBC7BDB23F59B7B00B0B905 /* StudentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfile.swift; sourceTree = "<group>"; };
+		9EBC7BDD23F5CE7800B0B905 /* StudentLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationRequest.swift; sourceTree = "<group>"; };
+		9EBC7BDF23F5CF6F00B0B905 /* CreateStudentLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentLocationResponse.swift; sourceTree = "<group>"; };
+		9EBC7BE923F604B000B0B905 /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 		9EFF493723F41B8E00822168 /* On the map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On the map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFF493A23F41B8E00822168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EFF493C23F41B8E00822168 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9EFF493E23F41B8E00822168 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9EFF494123F41B8E00822168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EFF494323F41B9200822168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EFF494623F41B9200822168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EFF494823F41B9200822168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EFF495223F41CC000822168 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9EFF495423F41E9C00822168 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		9EFF495623F41ED000822168 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9EFF495823F41F4200822168 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9EFF495A23F41FB500822168 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9EFF496423F423C800822168 /* OTMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
+		9EFF496923F428FC00822168 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		9EFF496C23F42A6900822168 /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
+		9EFF496E23F42BFC00822168 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E154B7123F45AF100117C4B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E154B7223F45B0100117C4B /* LocationModel.swift */,
+				9EBC7BE923F604B000B0B905 /* StudentModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		9EFF492E23F41B8E00822168 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +107,88 @@
 			children = (
 				9EFF493A23F41B8E00822168 /* AppDelegate.swift */,
 				9EFF493C23F41B8E00822168 /* SceneDelegate.swift */,
-				9EFF493E23F41B8E00822168 /* ViewController.swift */,
+				9EFF494823F41B9200822168 /* Info.plist */,
+				9EFF495123F41BC900822168 /* Model */,
+				9EFF495023F41BC500822168 /* View */,
+				9EFF494F23F41BBF00822168 /* Controller */,
+				9EFF494E23F41BB400822168 /* Assets */,
+			);
+			path = "On the map";
+			sourceTree = "<group>";
+		};
+		9EFF494E23F41BB400822168 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				9EFF494023F41B8E00822168 /* Main.storyboard */,
 				9EFF494323F41B9200822168 /* Assets.xcassets */,
 				9EFF494523F41B9200822168 /* LaunchScreen.storyboard */,
-				9EFF494823F41B9200822168 /* Info.plist */,
+				9EFF495823F41F4200822168 /* Colors.xcassets */,
 			);
-			path = "On the map";
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9EFF494F23F41BBF00822168 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF495223F41CC000822168 /* LoginViewController.swift */,
+				9E154B6823F454F400117C4B /* MapTabViewController.swift */,
+				9E154B7623F463B100117C4B /* TableTabViewController.swift */,
+				9E154B7823F4A5F100117C4B /* InfoPostingViewController.swift */,
+				9E23452223F4BF7500951EBC /* LocationViewController.swift */,
+				9E154B7423F4605A00117C4B /* UIViewController+Extension.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9EFF495023F41BC500822168 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF495623F41ED000822168 /* Colors.swift */,
+				9EFF495423F41E9C00822168 /* CustomButton.swift */,
+				9EFF495A23F41FB500822168 /* CustomTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EFF495123F41BC900822168 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E154B7123F45AF100117C4B /* Data */,
+				9EFF496223F4238100822168 /* Client */,
+				9EFF496323F4238100822168 /* Requests */,
+				9EFF496123F4238100822168 /* Responses */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9EFF496123F4238100822168 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF496E23F42BFC00822168 /* ErrorResponse.swift */,
+				9EFF496C23F42A6900822168 /* SessionResponse.swift */,
+				9E154B6D23F458A800117C4B /* StudentInformation.swift */,
+				9E154B6F23F459FE00117C4B /* StudentLocationResults.swift */,
+				9EBC7BDB23F59B7B00B0B905 /* StudentProfile.swift */,
+				9EBC7BDF23F5CF6F00B0B905 /* CreateStudentLocationResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		9EFF496223F4238100822168 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF496423F423C800822168 /* OTMClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		9EFF496323F4238100822168 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF496923F428FC00822168 /* LoginRequest.swift */,
+				9EBC7BDD23F5CE7800B0B905 /* StudentLocationRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EFF494723F41B9200822168 /* LaunchScreen.storyboard in Resources */,
+				9EFF495923F41F4200822168 /* Colors.xcassets in Resources */,
 				9EFF494423F41B9200822168 /* Assets.xcassets in Resources */,
 				9EFF494223F41B8E00822168 /* Main.storyboard in Resources */,
 			);
@@ -138,8 +263,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFF493F23F41B8E00822168 /* ViewController.swift in Sources */,
+				9EFF496D23F42A6900822168 /* SessionResponse.swift in Sources */,
+				9E154B7023F459FE00117C4B /* StudentLocationResults.swift in Sources */,
+				9E154B6E23F458A800117C4B /* StudentInformation.swift in Sources */,
+				9E154B7523F4605A00117C4B /* UIViewController+Extension.swift in Sources */,
+				9E154B6923F454F400117C4B /* MapTabViewController.swift in Sources */,
+				9E154B7723F463B100117C4B /* TableTabViewController.swift in Sources */,
+				9EFF495323F41CC000822168 /* LoginViewController.swift in Sources */,
+				9EFF496A23F428FC00822168 /* LoginRequest.swift in Sources */,
+				9EBC7BDE23F5CE7800B0B905 /* StudentLocationRequest.swift in Sources */,
+				9EFF495723F41ED000822168 /* Colors.swift in Sources */,
+				9EFF495523F41E9C00822168 /* CustomButton.swift in Sources */,
+				9EBC7BE023F5CF6F00B0B905 /* CreateStudentLocationResponse.swift in Sources */,
+				9EFF495B23F41FB500822168 /* CustomTextField.swift in Sources */,
 				9EFF493B23F41B8E00822168 /* AppDelegate.swift in Sources */,
+				9E154B7923F4A5F100117C4B /* InfoPostingViewController.swift in Sources */,
+				9EBC7BEA23F604B000B0B905 /* StudentModel.swift in Sources */,
+				9EBC7BDC23F59B7B00B0B905 /* StudentProfile.swift in Sources */,
+				9EFF496F23F42BFC00822168 /* ErrorResponse.swift in Sources */,
+				9EFF496523F423C800822168 /* OTMClient.swift in Sources */,
+				9E23452323F4BF7500951EBC /* LocationViewController.swift in Sources */,
+				9E154B7323F45B0100117C4B /* LocationModel.swift in Sources */,
 				9EFF493D23F41B8E00822168 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,14 +428,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "On the map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.anderson.On-the-map";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.On-the-map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,14 +447,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "On the map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.anderson.On-the-map";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.On-the-map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
