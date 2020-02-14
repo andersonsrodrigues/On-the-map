@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 
+private let reuseNotificationIdentifier = "reloadMap"
+
 class MapTabViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -23,6 +25,14 @@ class MapTabViewController: UIViewController {
             activity = LoadingView(view: view)
             requestStudentLocation()
         }
+        
+        subscribeToReloadMapNotification()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated);
+        
+        unsubscribeReloadMapNotifications()
     }
     
     @IBAction func refreshBarButton(_ sender: Any) {
@@ -71,19 +81,17 @@ class MapTabViewController: UIViewController {
         self.mapView.addAnnotations(annotations)
     }
     
-    func handleCheckStudentLocationResponse(sucess: Bool, error: Error?) {
-        if sucess {
-            let alertVC = UIAlertController(title: "Student Location", message: "You have already posted a Student Location. Would you like to overwrite your current location?", preferredStyle: .alert)
-            alertVC.addAction(UIAlertAction(title: "Overwrite", style: .default, handler: { (action) in
-                print(action)
-            }))
-            alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            present(alertVC, animated: true, completion: nil)
-//            let infoPostingVC = storyboard?.instantiateViewController(identifier: "infoPostingVC") as! InfoPostingViewController
-//            self.present(infoPostingVC, animated: true, completion: nil)
-        } else {
-            showAlertFailure(title: "Failed Check Student Location", message: error?.localizedDescription ?? "")
-        }
+    @objc func reloadMapFromNotification(_ notification: Notification) {
+        parseLocations()
+    }
+    
+    // MARK: Table - Notifications
+    func subscribeToReloadMapNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadMapFromNotification), name: NSNotification.Name(rawValue: reuseNotificationIdentifier), object: nil)
+    }
+    
+    func unsubscribeReloadMapNotifications() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: reuseNotificationIdentifier), object: nil)
     }
 }
 

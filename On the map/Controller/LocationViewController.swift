@@ -15,27 +15,49 @@ class LocationViewController: UIViewController {
 
     var location: CLPlacemark?
     var link: String?
+    var activity: LoadingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Add Location"
         parseLocation()
+        if let navigation = navigationController?.view {
+            activity = LoadingView(view: navigation)
+        }
     }
 
     @IBAction func submitButton(_ sender: Any) {
         if let placemark = location {
             if let locationArea = placemark.locality, let subLocationArea = placemark.administrativeArea, let country = placemark.country, let location = placemark.location, let studentLink = link {
                 OTMClient.createStudentLocation(address: "\(locationArea) - \(subLocationArea), \(country)", link: studentLink, lat: location.coordinate.latitude, long: location.coordinate.longitude, completion: handleCreateStudentLocationResponse(success:error:))
+            } else {
+                self.showAlertFailure(title: "Failed Map Locations", message: "There's some information missing, please, go back and try again")
             }
+        } else {
+            self.showAlertFailure(title: "Failed Map Locations", message: "Could not find the apropriated location, please, go back and try again")
         }
     }
     
     func handleCreateStudentLocationResponse(success: Bool, error: Error?) {
         if success {
+            activity.showActivityView()
             
-            self.dismiss(animated: true, completion: nil)
+            OTMClient.getStudentLocation(query: "limit=100&order=-updatedAt") { (locations, error) in
+                self.activity.hideActivityView()
+                
+                if let error = error {
+                    self.showAlertFailure(title: "Failed Map Locations", message: error.localizedDescription)
+                    return
+                }
+
+                LocationModel.informations = locations
+                
+                NotificationCenter.default.post(name: NSNotification.Name("reloadMap"), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name("reloadTable"), object: nil)
+                
+                self.dismiss(animated: true, completion: nil)
+            }
         } else {
-            print(error)
             showAlertFailure(title: "Failed Location", message: error?.localizedDescription ?? "")
         }
     }

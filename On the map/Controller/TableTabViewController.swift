@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let reuseNotificationIdentifier = "reloadTable"
+
 class TableTabViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -22,6 +24,14 @@ class TableTabViewController: UIViewController {
             activity = LoadingView(view: view)
             requestStudentLocation()
         }
+        
+        subscribeToReloadTableNotification()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated);
+        
+        unsubscribeReloadTableNotifications()
     }
     
     @IBAction func refreshBarButton(_ sender: Any) {
@@ -46,6 +56,19 @@ class TableTabViewController: UIViewController {
             LocationModel.informations = locations
             self.tableView.reloadData()
         }
+    }
+    
+    @objc func reloadTableFromNotification(_ notification: Notification) {
+        self.tableView.reloadData()
+    }
+    
+    // MARK: Table - Notifications
+    func subscribeToReloadTableNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableFromNotification), name: NSNotification.Name(rawValue: reuseNotificationIdentifier), object: nil)
+    }
+    
+    func unsubscribeReloadTableNotifications() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: reuseNotificationIdentifier), object: nil)
     }
 }
 
