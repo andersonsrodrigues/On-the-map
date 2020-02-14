@@ -14,10 +14,15 @@ class InfoPostingViewController: UIViewController {
     @IBOutlet weak var locationTextField: CustomTextField!
     @IBOutlet weak var linkTextField: CustomTextField!
     
+    var activity: LoadingView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Add Location"
+        if let view = navigationController?.view {
+            activity = LoadingView(view: view)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,8 +50,10 @@ class InfoPostingViewController: UIViewController {
             self.showAlertFailure(title: "Link field must be filled out", message: "")
             return
         }
-        
+        activity.showActivityView()
         CLGeocoder().geocodeAddressString(location) { (CLPlace, error) in
+            self.activity.hideActivityView()
+            
             if let place = CLPlace {
                 DispatchQueue.main.async {
                     let storyboard = UIStoryboard (name: "Main", bundle: nil)

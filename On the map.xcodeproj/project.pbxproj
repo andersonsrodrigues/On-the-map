@@ -19,6 +19,7 @@
 		9EBC7BDE23F5CE7800B0B905 /* StudentLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BDD23F5CE7800B0B905 /* StudentLocationRequest.swift */; };
 		9EBC7BE023F5CF6F00B0B905 /* CreateStudentLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BDF23F5CF6F00B0B905 /* CreateStudentLocationResponse.swift */; };
 		9EBC7BEA23F604B000B0B905 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BE923F604B000B0B905 /* StudentModel.swift */; };
+		9EBC7BF023F6614500B0B905 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7BEF23F6614500B0B905 /* LoadingView.swift */; };
 		9EFF493B23F41B8E00822168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF493A23F41B8E00822168 /* AppDelegate.swift */; };
 		9EFF493D23F41B8E00822168 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF493C23F41B8E00822168 /* SceneDelegate.swift */; };
 		9EFF494223F41B8E00822168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF494023F41B8E00822168 /* Main.storyboard */; };
@@ -48,6 +49,9 @@
 		9EBC7BDD23F5CE7800B0B905 /* StudentLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationRequest.swift; sourceTree = "<group>"; };
 		9EBC7BDF23F5CF6F00B0B905 /* CreateStudentLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentLocationResponse.swift; sourceTree = "<group>"; };
 		9EBC7BE923F604B000B0B905 /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
+		9EBC7BEF23F6614500B0B905 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9EBC7BF223F66DD500B0B905 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9EBC7BF423F66DE000B0B905 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9EFF493723F41B8E00822168 /* On the map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On the map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFF493A23F41B8E00822168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EFF493C23F41B8E00822168 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,11 +90,21 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		9EBC7BF123F66DD400B0B905 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC7BF423F66DE000B0B905 /* CoreLocation.framework */,
+				9EBC7BF223F66DD500B0B905 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9EFF492E23F41B8E00822168 = {
 			isa = PBXGroup;
 			children = (
 				9EFF493923F41B8E00822168 /* On the map */,
 				9EFF493823F41B8E00822168 /* Products */,
+				9EBC7BF123F66DD400B0B905 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +160,7 @@
 				9EFF495623F41ED000822168 /* Colors.swift */,
 				9EFF495423F41E9C00822168 /* CustomButton.swift */,
 				9EFF495A23F41FB500822168 /* CustomTextField.swift */,
+				9EBC7BEF23F6614500B0B905 /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +300,7 @@
 				9E23452323F4BF7500951EBC /* LocationViewController.swift in Sources */,
 				9E154B7323F45B0100117C4B /* LocationModel.swift in Sources */,
 				9EFF493D23F41B8E00822168 /* SceneDelegate.swift in Sources */,
+				9EBC7BF023F6614500B0B905 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

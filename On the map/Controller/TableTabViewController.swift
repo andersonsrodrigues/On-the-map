@@ -11,12 +11,17 @@ import UIKit
 class TableTabViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var activity: LoadingView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "On the Map"
-        requestStudentLocation()
+        if let view = tabBarController?.view {
+            activity = LoadingView(view: view)
+            requestStudentLocation()
+        }
     }
     
     @IBAction func refreshBarButton(_ sender: Any) {
@@ -29,12 +34,15 @@ class TableTabViewController: UIViewController {
     }
 
     func requestStudentLocation() {
+        activity.showActivityView()
         OTMClient.getStudentLocation(query: "limit=100&order=-updatedAt") { (locations, error) in
+            self.activity.hideActivityView()
+            
             if let error = error {
-                print(error.localizedDescription)
+                self.showAlertFailure(title: "Failed List Locations", message: error.localizedDescription)
                 return
             }
-            print(locations)
+            
             LocationModel.informations = locations
             self.tableView.reloadData()
         }
